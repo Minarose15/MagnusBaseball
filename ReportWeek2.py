@@ -33,7 +33,7 @@ while (ys[-1] > 0):
     xs.append(xs[-1] + v[0]*dt)
     ys.append(ys[-1] + v[1]*dt)
     v[0] += -B2(ve) * ve * v[0] * dt + magnus_acceleration[0] * dt
-    v[1] += -g*dt + magnus_acceleration[1] * dt - B2(ve) * ve * vy * dt
+    v[1] += -g*dt + magnus_acceleration[1] * dt - B2(ve) * ve * v[1] * dt
     
 print(magnus_acceleration)
     
